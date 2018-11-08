@@ -11,6 +11,9 @@ if($method == "POST") {
 		case 'Procure':
 			$speech = "PHP: We will buy it soon";
 			break;
+		case 'Default Welcome Intent':
+			$speech = "PHP: heyyyyyy";
+			break;
 		default:
 			$speech = "PHP:Sorry, I didnt get that. Please ask me something else.";
 			break;		
