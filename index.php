@@ -32,17 +32,17 @@ if($method == "POST") {
 }
 else
 {
-	echo "Method not allowed";
-	$servername = "db.dpoplus.ai";
-	$username = "root";
-	$password = "alskdjfhg";
-	// Create connection
-        $conn = new mysqli($servername, $username, $password);
-        // Check connection
-        if ($conn->connect_error) {
-           die("Connection failed: " . $conn->connect_error);
-         } 
-         echo "Connected successfully";
-          }
+   echo "Method not allowed";
+   $dbhost = 'db.dpoplus.ai';
+   $dbuser = 'root';
+   $dbpass = 'alskdjfhg';
+   $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+   
+   if(! $conn ) {
+      die('Could not connect: ' . mysql_error());
+   }
+   
+   echo 'Connected successfully';
+   mysql_close($conn);
 
 ?>
