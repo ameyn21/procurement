@@ -1,6 +1,6 @@
 <?php
 use Dialogflow\WebhookClient;	
-$agent = new WebhookClient(json_decode(file_get_contents('php://input'),true));
+//$agent = new WebhookClient(json_decode(file_get_contents('php://input'),true));
 $method = $_SERVER['REQUEST_METHOD'];
 
 if($method == "POST") {
